@@ -10,9 +10,14 @@ export class AppController {
     return this.appService.getHello();
   }
 
- @Post()
+
+  @Post()
   setHello():string { 
-    //return this.appService.getShowNameUser();
-    return 'Post: hello word';
+    return this.appService.GetSms('Hello');
+  }
+
+ @Post('listem')
+  setListemItem():string { 
+    return this.appService.GetSms('ItemCards');
   }
 }

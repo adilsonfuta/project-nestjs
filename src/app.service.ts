@@ -6,7 +6,7 @@ export class AppService {
     return 'Hello World!';
   }
 
-  getShowNameUser(): string{
-    return "Nome teste user";
+  GetSms(value): string{
+    return 'Send'+value;
   }
 }
