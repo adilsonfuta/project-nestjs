@@ -7,6 +7,6 @@ export class AppService {
   }
 
   GetSms(value): string{
-    return 'Send'+value;
+    return ' Send ' +value;
   }
 }
