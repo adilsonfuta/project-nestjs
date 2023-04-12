@@ -12,38 +12,36 @@ export class UserController {
     }
 
     @Put(':id')
-    async updateTotal(@Body() {name,email, password}: UpdateUserDTO, @Param() parametros){
+    async updateTotal(@Body() { name,email, password }: UpdateUserDTO, @Param() parametros){
             return {
                 method: 'put',
                 name,
                 email,
                 password,
-                parametros
+                parametros }
     }
-
     
+
+    @Patch(':id')
+    async updatePartial(@Body() body, @Param() parament){
+        return {
+        method: 'put',
+        body,
+        parament,
+        }
+    }
 
     @Get()
     async list(){
         return { users:[] }
     }
 
+
     @Get(':id')
     async readOne(@Param() parametro){
         return { users:{ }, parametro }
     }
 
-
-    }
-
-    @Patch(':id')
-    async updatePartial(@Body() body, @Param() parament){
-        return {
-     method: 'put',
-      body,
-      parament,
-        }
-    }
 
     @Delete(':id')
     async DeleteUser(@Param() Parametro){

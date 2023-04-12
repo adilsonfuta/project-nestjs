@@ -2,6 +2,8 @@ https://github.com/typestack/class-validator
 
 npm i ---save class-validator class-transformer 
 
+ npm i @nestjs/mapped-types
+
 
 ### All request for controller
 
