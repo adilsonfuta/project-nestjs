@@ -9,16 +9,12 @@ export class UserService {
 
     }
 
-    create({email, name , password}:CreateUserDTO){
-        this.prisma.user.create({
+   async create({email, name , password}:CreateUserDTO){
+       return await this.prisma.user.create({
             data:{
                 email,
                 name,
                 password
-            },
-            select:{
-                id: true,
-                name: true
             }
         })
     }
