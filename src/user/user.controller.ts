@@ -8,11 +8,12 @@ import { UserService } from "./user.service";
 export class UserController {
 
     constructor(private readonly UserService: UserService){}
-    
+
+
     @Post()
-    async create (@Body() {name, email, password} : CreateUserDTO){
-        // return { name, email, password };
-        return this.UserService.create({name, email, password});
+    async create (@Body() data: CreateUserDTO){
+        // return this.UserService.create({name, email, password});
+      return  this.UserService.create(data);
     }
 
     @Put(':id')

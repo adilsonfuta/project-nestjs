@@ -10,6 +10,14 @@ npm i ---save class-validator class-transformer
 - npx prisma init
 
 
+
+    // @Post()
+    // async create (@Body() {name, email, password} : CreateUserDTO){
+    //     // return { name, email, password };
+    //     return this.UserService.create({name, email, password});
+    // }
+
+
 ### All request for controller
 
      @Post()
